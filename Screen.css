@@ -1,0 +1,108 @@
+html {background-color: #FFFFFF;
+    background-image: url(http://i66.tinypic.com/epi134.png);
+    background-repeat: repeat;}
+
+body {color: #FFFFFF;
+    font-size: medium;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-family: "Trebuchet MS", sans-serif;
+    text-shadow: 2px 2px #000000;}
+
+h1 {font: bold small-caps 45px Palatino, serif;
+    margin-bottom: 0px}
+h2 {font: 900  small-caps 30px Comic Sans MS, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 0px;}
+h3 {font: 700  small-caps 20px Comic Sans MS, sans-serif;
+    margin-top: 0px;
+    text-decoration: underline}
+
+.sortable {caption-side: top;
+    border-color: aqua;
+    border-style: solid;
+    border-spacing: 5pt;
+    border-width: medium;
+    vertical-align: left;
+    text-align: center;}
+
+table.sortable th {
+    background-color:#000000;
+    cursor: default;}
+
+.table-input {background: #000000;
+    border: chartreuse dashed}
+
+section {margin-top: 15px}
+
+.submitform {background: #000000}
+caption {font: small-caps 900 italic 22px sans-serif;
+    text-decoration: underline}
+td {border: 1px solid black}
+
+nav {margin-top: inherit;
+    border: white dotted 3pt;
+    background: #000000}
+
+a:link {color: aqua;}
+a:visited {color: aquamarine;}
+a:hover {color: lightyellow;}
+a:active {color: yellow;}
+a:focus {color: darkturquoise;}
+
+pre {text-transform: uppercase;
+    font-weight: 100}
+code {text-transform: uppercase;
+    font-weight: 100}
+img {float: right}
+
+ol li {text-indent: 5px;}
+
+ol {list-style: decimal-leading-zero outside;
+    margin: 0px 0px 5px 0px}
+
+ul {list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url(http://i.imgur.com/8ZWKn8S.png);}
+
+dl {margin-top: 2px;
+    margin-bottom: 2px;}
+
+p {margin-bottom: 0px;
+   margin-left: inherit;
+   margin-right: auto;
+   margin-top: 0px;}
+
+iframe {vertical-align: bottom}
+
+.errors1 {border-bottom: 0px;
+    margin-bottom: 0px}
+.errors2 {border-top: 0px;
+    margin-top: 0px}
+.table5 {border-width: medium}
+.table5 td {border-width: medium}
+.table5 th {background-color: black}
+
+.lab4 li {margin-right: 0px}
+.secondary {list-style: lower-alpha;}
+
+.doc {border: 0pt;
+    background: none}
+
+.date span {float: right}
+
+@media screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px) {
+
+
+pre {text-transform: uppercase;
+    font-weight: 100}
+code {text-transform: uppercase;
+    font-weight: 100}
+img {vertical-align: text-top}
+
+ol {list-style: outside;
+    margin: 0px 0px 5px 0px}
+}

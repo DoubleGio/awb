@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Web Technology Assignments</title>
+        <link rel="stylesheet" type="text/css" href="screen.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="print.css" media="print">
+        <script src="http://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="table_scripts.js"></script>
+    </head>
+    
+    <body onload = "readJson()">
+        <h1>Web Technology Assignments</h1>
+            <h2><em>ted asiamah &amp; giorgie goiati</em></h2>
+        
+        <nav class="noPrint">
+            <a href="#1">Week 1</a>
+            <a href="#2">Week 2</a>
+            <a href="#3">Week 3</a>
+            <a href="report.html">Week 4</a>
+        </nav>
+
+        <section>
+            <table class="sortable" id="dynamic" lable="This table is sortable by clicking on the headers">
+            <caption>Product inventory list</caption>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Location</th>
+                    <th>Purchase date</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+                <tr class="table-input">
+                    <form id="submitform">
+                        <td class="noPrint"><input type="text" name="name" required></td>
+                        <td class="noPrint"><input type="text" name="category" required></td>
+                        <td class="noPrint"><input type="text" name="amount" required></td>
+                        <td class="noPrint"><input type="text" name="location" required></td>
+                        <td class="noPrint"><input type="text" name="date" value="yyyy-mm-dd" required></td>
+                        <td class="noPrint"><button id="formSubmit" class="noPrint">Submit</button></td>
+                    </form>
+                </tr>
+            </table>
+            <button id="Reset" class="noPrint">Reset database</button>
+        </section>
+        
+        <section>
+            <h2 id="1">Week 1</h2>
+            <h2>Browser Compatability Report</h2>
+            <p>We tested on Chrome and Safari.</p>
+            <p>We only found one "major" difference in the compatability of these browsers, the <em>&lt;widows&gt;</em> and <em>&lt;orphans&gt;</em> didn't work for Safari, but besides that they both behaved properly.</p>
+            <h3>Answers Lab 1</h3>
+            <ol>
+            <li>
+                The <abbr title="World Wide Web Consortium">W3C</abbr> is the main authority of the world wide web, while the <abbr title="Web Hypertext Application Technology Working Group">WHATWG</abbr> is group of web developers as well, that disagrees partly with some of the directions of the <abbr title="World Wide Web Consortium">W3C</abbr> and does things differently.</li>
+            <li>
+                The internet is a network of networks connected via the public backbone and communicating using TCP/IP communication protocol.
+                <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.</p>
+            </li>
+            <li>
+                URIs, HTTP and HTML</li>
+            <li class="page-break">
+                The main difference with the version made in Words is that it has a premade head, filled with Word settings. It also has a lot more tags in the html, like this: <pre>&lt;html xmlns:o="urn:schemas-microsoft-com:office:office"
+                xmlns:w="urn:schemas-microsoft-com:office:word"
+                xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+                xmlns="http://www.w3.org/TR/REC-html40"&gt;</pre> body, div and p (<code>&lt;p class=MsoNormal&gt;</code>).</li>
+            <li>
+                HTTP uses port 8,
+                SSH port 22 and
+                ftp port 20
+            </li>
+            <li>
+                "b" is a style markup, just for making something look bold, while "strong" denotes text with a strong emphasis. It doesn't just makes text bold. For example: if a text to speech program needs to shout bold text, it needs "strong" to recognize the text it needs to shout.
+                <p>
+                The other pair is "i" and "em".</p></li>
+            <li>
+                They both provide no semantic information but are just used to group content.
+                <p>
+                "div" is a block element, "span" is a inline element.</p></li>
+            <li>
+                <dl>
+                <dt>Pros:</dt>
+                    <dd>
+                        The ability to embed another document (like another website) in the current html document.</dd>
+                    <dd>
+                        You can specify the size of the box.</dd>
+                    <dd>
+                        It can be a target for a link.</dd>
+                <dt>Cons:</dt>
+                    <dd>
+                        Forces a new scrollbar.</dd>
+                    <dd>
+                        Linking becomes difficult.</dd>
+                </dl></li>
+            <li>
+                <ul>
+                <li>
+                    A webpage looks better with CSS, it has more         styles and options than HTML.</li>
+                <li>
+                    It's easier to mark/read text and navigate a site with CSS.</li>
+                <li>
+                    It can be used to adjust webpages for different devices with different formats.</li>
+                <li>
+                    It indicates how the content should be displayed.</li>
+                <li>
+                    It helps quickly creating multiple pages/documents with the same style and format.</li>
+                <li>
+                    It helps with having a consistent design on multiple pages.</li>
+                <li>
+                    It makes updating sites easier.</li>
+                <li>
+                    It makes pages load faster.</li>
+                </ul></li>
+            <li>
+                We expected the emphasized word to be shown even more italic. However the browser didn't behave to our expectation, the emphasized word was equally italic as the rest.</li>
+            <li>
+                <p>
+                Google Chrome vs. Safari</p>
+                <ul>
+                <li>
+                    Chrome has a faster performance than Safari, but uses a lot more memory and battery.</li>
+                <li>
+                    Safari doesn't support Linux and Windows, Chrome does.</li>
+                </ul></li>
+            </ol>
+        </section>
+        <section>
+            <h3 class="page-break">Answers Lab 2</h3>
+            <ol>
+                <li>
+                    Guideline 1.1 "Text Alternatives": <blockquote cite="https://www.w3.org/TR/WCAG20/#text-equiv">
+                    Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.</blockquote></li>
+                <li>
+                    We ran it on <q>reddit.com</q>, a popular  social website. WAVE detected 31 errors on its frontpage, 17 of them being no ALT text errors, and also 191 alerts, most of those being "Very small text" and "Redundant title text". Besides those the site is fairly accessible.</li>
+                <li>
+                    <ol>
+                        <li><strong>Forground colour:</strong> #FF0000; <strong>Background colour:</strong> #009C3C. These colours are not compliant and don't provide enough contrast (contrast ratio = 1,11).</li>
+                        <li><strong>Foreground colour:</strong> #FFFF00; <strong>Background colour:</strong> #0000FF. These colour are compliant and provide enough contrast (contrast ratio = 8).</li>
+                        <li><strong>Foreground colour:</strong> #FFFFFF; <strong>Background colour:</strong> #FF00B0. These colours are sort of compliant (only compliant according to 1 of the 4 WCAG guidelines) and provide decent contrast (contrast ratio = 3,58).
+                    </ol></li>
+                <li>
+                    <ul>
+                        <li>Pro native app: runs fast and smooth</li>
+                        <li>Pro responsive app: requires internet to work</li>
+                        <li>Con native app: cost more time and uses more data</li>
+                        <li>Con responsive app: Poor Performance compared to a native app</li>
+                    </ul></li>
+                <li>
+                    W3C Internationalization Activity has as mission to ensure that W3C's formats and protocols are usable worldwide. These protocols and formats should be usable in all languages and in all writing systems.
+                    To ensure this the Internationalization Activity the work is divided in groups: Internationalization Working Group, Internationalization Interest Group and Internationalization Tag Set Interest Group.<br>
+                    The Internationalization Working Group provide a wide range of advice and support for groups developing or using international aspects of the Web. Looking for issues that would cause barriers to deployment and use of Web technologies due to language, script, region or culture.<br>
+                    Whereas the Internationalization Interest Group provide documents with requirements, guidelines and proposals for specification writers, as well as educational resources, checkers and outreach to help developers and content authors better understand each other.<br>
+                    The last group provides a set of concepts that can be mapped to markup and that makes it easier to internationalize and localize documents.</li>
+                <li>
+                    <ul>
+                        <li>www.few.vu.nl - 130.37.164.154</li>
+                        <li>www.cs.vu.nl - 130.37.164.154</li>
+                    </ul>
+                    We found this using the Network Utility app on our macbook. They use the same server, so when something is affecting the server, it will affect both websites.</li>
+                <li>
+                    IPv6 (Internet Protocol version 6) also known as IPng (Internet Protocol next generation) is the newest version of the Internet Protocol. The main features of this protocol are providing identification and location system for computers on networks and routes traffic across the internet. The IPv4 (Internet Protocol version 4) is the fourth version of the IP used for identifying hosts on a network using an addressing system. The IPv4 makes use of a 32-bit address scheme. The total number of IP-addresses will be 2^32. The internet is growing so fast that eventually there will not be enough IP-addresses. One of the main reasons to move from IPv4 to IPv6 is that the newer version makes it possible to generate more IP-addresses using a 128-bit address scheme. Another reasons to move from IPv4 to IPv6 includes better end-to-end connectivity, faster routing and better security.</li>
+                <li>
+                    MIME type is identifier for file formats and format contents passed on from the internet.
+                    Most common text subtypes: .html, .txt, .rtf, etc.
+                    The Internet Assigned Numbers Authority (IANA) is the official authority for the standardization and publication of these classifications. Sources: http://www.iana.org/; http://www.weonlydo.com/Mailbox/Help/MimeTypes.html</li>
+                <li>
+                    <p>GET requests data from a specific resource from the server.</p>
+                    <p>POST submits data to be processed by a specific resource on the server.</p>
+                    <p>Source: http://www.w3schools.com/TAgs/ref_httpmethods.asp</p></li>
+                <li class="page-break-after">
+                    The generated key is: "fcb52a67".</li>
+            </ol>
+        </section>
+        <section>
+            <h2 id="2">Week 2</h2>
+            <h3>Answers lab 3</h3>
+            <ol>
+                <li>
+                    We used Safari, by pressing cmd+alt+U you open the developer tools on Safari and from there you can go to the console.
+                    <img src="http://i.imgur.com/WqTJBCi.png" alt="Example showing the browser" width="700" class="example1"></li>
+                <li>
+                    <ul>
+                    <li>
+                        <code>&lt;script&gt;document.body.style.backgroundColor = "red";&lt;/script&gt;</code></li>
+                    <li>
+                        <code>&lt;a href="#1" onclick="this.href = ''"&gt;Week 1&lt;/a&gt;</code></li>
+                    </ul></li>
+                <li>
+                    <dl>
+                    <dt>Pros DOM API:</dt>
+                        <dd>Short and fast</dd>
+                        <dd>Fully customazible</dd>
+                    <dt>Pros JQuery:</dt>
+                        <dd>Don’t have to write the code yourself. </dd>
+                        <dd>Code is more complete (better compatibility).</dd>
+                    <dt>Cons DOM API:</dt>
+                        <dd>Edits the html-file.</dd>
+                        <dd>Have to write it yourself.</dd>
+                    <dt>Cons JQuery:</dt>
+                        <dd>Have to download an extra file, that might not be of good quality.</dd>
+                        <dd>Hard to customize.</dd>
+                        <dd>Slower.</dd>
+                    </dl></li>
+                <li>
+                    <dl>
+                    <dt>Similarities (with Java):</dt>
+                        <dd>Same syntax: '<code>//</code>' for comments, end statements with '<code>;</code>' and more.</dd>
+                        <dd>while loops, if statements.</dd>
+                        <dd>Objects with dot-notation.</dd>
+                    <dt>Differences (with Java):</dt>
+                        <dd>Interpreted language: no compile step in JavaScript.</dd>
+                        <dd>Simplified types: no int, float, double, only Number.</dd>
+                        <dd>No <code>main()</code> function/method.</dd>
+                        <dd>Limited safety features.</dd>
+                    </dl></li>
+                <li>
+                    AJAX = Asynchronous JavaScript And XML. “Asynchronous” means that the page can load something new without reloading the whole page again (loading something asynchronously with loading the whole page).</li>
+                <li>
+                    Host objects are objects that are provided by the host environment (i.e. web browser). Two often used host objects are window and document. Java and Python don’t have equivalents because they don’t have a host environment (i.e. web browser).</li>
+                <li>
+                    Boolean() to find out if an expression is true. String() stores a series of characters like "Ted Asiamah".</li>
+                <li>
+                    The role of events in HTML are that happen to HTML elements. When JavaScript is used in HTML pages, JavaScript can “react” on these events. And Event listeners attaches an event handler to the specified element.</li>
+                <li>
+                    Functionality of the autocomplete component: allows you to take advantage of the Google data store at many places around the world. Autocomplete lets you put one input box on your page and users can type in their request. Google will then try to match their request.</li>
+                <li>
+                    <br>
+                    <iframe
+                        width="600"
+                        height="450"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBGqPFj-CN5Iq0yICf-OoC_U6DDsA3vL08
+                        &q=Space+Needle,Seattle+WA" allowfullscreen>
+                    </iframe></li>
+            </ol>
+        </section>
+        <section>
+            <h3 class="page-break">Answers Lab 4</h3>
+            <ol class="lab4">
+                <li><ol class="secondary">
+                    <li>
+                        Given this table I think the tokenizer did its job quite well. The terms were counted good. An improvement would be filtering stop words.</li>
+                    <li>
+                        It makes sense to include all of the “top 30 words” in the stop words list. Because stop words refer to the most common used words. The “top 30 words” classify as stop words.</li>
+                    <li>
+                        Looking at the top 30 list I don’t think the frequency follows the Zipf’s law. The number 1 on the list is twice as much as the number 2 on the list (number 1: 1644 and number two: 872). But the law doesn’t hold if you compare the rest of the list with each other. Let’s take number 2 on the list with number 3 on the list for example. You see that the top 30 doesn’t follow the Zipf’s law. Because the frequency of number 2 is not twice as much as the frequency of number three (number 2: 872 and number 3: 729).</li>
+                    <li>
+                        In this case Heaps Law describes the dictionary size as a function of the input token. As the input tokens increases the dictionary size increases as well.</li>
+                    </ol></li>
+                <li><ol class="secondary">
+                    <li>
+                        We think that the quality of the TF-based search is good. The recall and  precision are not that high because many result are not relevant.</li>
+                    <li>
+                        Compared to the TF-based search the results of TFIDF-based search are lower. Also the results are decimal numbers instead of whole numbers. These terms have the highest TFIDF scores:
+                        <ul>
+                            <li>
+                                “queen” - 3.14 (CHAPTER VIII. The Queen's Croquet-Ground)</li>
+                            <li>
+                                “tea” - 3.44 (CHAPTER VII. A Mad Tea-Party)</li>
+                            <li>
+                                “bill” - 3.66 (CHAPTER IV. The Rabbit Sends in a Little Bill)</li>
+                        </ul>
+                        We think these terms describe the associated Alice chapter well because these term can be found in the name of the chapter.</li>
+                    <li>
+                        We weren’t able to find the answer to this question. We asked all the available TA’s 20 januari from 13:30 till 16:30. No one knew the answer.</li>
+                    <li>
+                        If you implement the improvements suggested to the tokenizer in question 1a then precision and recall will both be higher. Because there would be more relevant results.</li>
+                    </ol>
+                    </li>
+            </ol>
+        </section>
+        
+        <section>
+            <h2 id="3" class="page-break">Week 3</h2>
+            <h3>Answers lab 5</h3>
+            <ol>
+                <li>
+                    <ol class="secondary">
+                        <li>
+                            In this context idempotent means keeping track of status information</li>
+                        <li>
+                            Idempotent requests simplify the implementation of a caching HTTP proxy because information is being stored.</li>
+                        <li>
+                            Because visitor counters aren’t idempotent (e.g.: “visitors”++;).</li>
+                        <li>
+                            A single visitor can use different proxies, causing him to be counted multiple times.</li>
+                    </ol></li>
+                <li>
+                    HTTP is a so-called stateless protocol because HTTP treats each request as an independent transaction. This has nothing to do with any requests made in the past.</li>
+                <li>
+                    <dl>
+                        <dt>Pros:</dt>
+                        <dd>Simple server design.</dd>
+                        <dt>Cons:</dt>
+                        <dd>Every requests needs more information compared to a stateful protocol.</dd>
+                        <dd>It is hard to build online shops with a "shopping basket" functionality without the use of cookies because the cookies are a mechanism for websites to remember stateful information. The cookies keep track of which user is assigned to which shopping basket. The server sends a cookie to the client. The client has a unique identifier. Because cookies are sent to the server with every request the client makes, that session identifier will be sent back to the server every time the user visits a new page on the website. This lets to server now what items are in the shopping bag.</dd>
+                    </dl></li>
+                <li>
+                    A 303 status code in response to a HTTP/1.1 request stands for that the server does not have a representation of the target resource that can be transferred by the server over HTTP. <br>
+                    Source used: <a href="https://www.w3.org/TR/cooluris/">https://www.w3.org/TR/cooluris/</a> <br>
+                    This can be seen as an authoritative source because W3C is the main international standards organization for the World Wide Web.</li>
+                <li class="page-break">
+                    <table class="table5" class="noPrint">
+                        <tr>
+                            <th>Spotify</th>
+                            <td>
+                                https://api.spotify.com/v1/albums/
+                                <dl>
+                                    <dt>Parameters:</dt>
+                                    <dd>id</dd>
+                                    <dd>market</dd>
+                                </dl>
+                            </td>
+                            <td>GET</td>
+                            <td>JSON</td>
+                            <td class="errors1">
+                                <dl>
+                                    <dt>200 (OK)</dt>
+                                    <dd>The request has succeeded. The client can read the result of the request in the body and the headers of the response.</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Twitter</th>
+                            <td>
+                                https://api.twitter.com/1.1/statuses/user_timeline.json
+                                <dl>
+                                    <dt>Parameters:</dt>
+                                    <dd>user_id</dd>
+                                    <dd>screen_name</dd>
+                                    <dd>since_id</dd>
+                                    <dd>count</dd>
+                                    <dd>max_id</dd>
+                                    <dd>trim_user</dd>
+                                    <dd>exclude_details</dd>
+                                    <dd>contributor_details</dd>
+                                    <dd>include_rts</dd>
+                                </dl>
+                            </td>
+                            <td>GET</td>
+                            <td>JSON</td>
+                            <td class="errors2">
+                                <dl>
+                                    <dt>400 (Bad Request)</dt>
+                                    <dd>The request could not be understood by the server due to malformed syntax. The message body will contain more information.</dd>
+                                    <dt>404 (Not Found)</dt>
+                                    <dd>The requested resource could not be found. This error can be due to a temporary or permanent condition.</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                    </table></li>
+                <li>
+                    GET, POST, OPTIONS, PUT, DELETE<br>
+                    From any origin (denoted with '<code>*</code>')</li>
+                <li>
+                    Because when you send a HEAD request, you get no actual content (no body), so there’s no content of which to know the type of. We expect a JSON file because that was indicated on their website.<br>
+                    Actual Content-Type: “application/json; charset=utf-8”, as expected.</li>
+                <li>
+                    When I change code and save, I can immediately see the changes after reloading. I get 404 error when I try to reload.</li>
+                <li>
+                    With an HTTP server serving database data dynamically in an HTML table you can attach a table to a certain route more easily.<br>
+                    The data in JSON format is easier to edit with Javascript.</li>
+            </ol>
+        </section>
+        
+        <section>
+            <h3>Answers Lab 6</h3>
+            <ol> <li> 
+                    Security breaches, identity theft, privacy violations, and the social              disruptions of globalization.
+                    We feel like these topics are better left to existing research fields, because web scientists are the people who just provide the tools they made, dealing with how people use their tools has nothing to do with the creator. </li>
+                <li> 
+                    In the context of web commerce the term the long tail refers to as a rank-size distribution. Making it possible to sell a large number of unique items without have large quantities. The long tail can still be profitable for online shops because they can use this strategy to sell unique items without having large quantities.</li>
+        
+                <li> 
+                    The role of data.gov in the discussion about a more transparent government is that they provide an increased public access to federal government datasets. A potential danger of sites like data.gov is that some information might fall in the wrong hands. People can use the information they find for the wrong purpose. </li>
+                <li> 
+                    We don’t think Jakob Nielsen top 10 list is still relevant. Almost every point is outdated. Problems in his top 10 that have become rare in 2016 are for example: Bad Search, Not Changing the Color of Visited Links and Fixed Font Size. From our own experience we don’t know of any severe usability problems we encounter on current Web sites that are missing on this list. </li>
+                <li> 
+                    “reddit.com”; The A-version would be the original design, the B-version would be a version with a different kind of index (at the top). By distributing the different versions to live traffic you get a good measure of the performances.
+                 The dependent variable is the performance and the independent variables are the versions.
+                Our hypotheses would be that the difference between the versions would be so small that it barely would make any difference. </li>
+                <li>
+                    Answer</li>
+                <li class="page-break"> 
+                    Because the format is standardized, the files can be readily analyzed by a variety of web analysis programs. Such a program can check the link structure by analyzing the web logs and check the performance (load times and such).
+                    The dependent variable is the web log and the independent variable is the link structure.
+                    Our hypotheses would be that the experiment would end with with us finding an 
+                    improvement to our link structure. </li>
+                <li> 
+                    The first version of Google available is from 1998, where Google is still in beta / a prototype. It was a barebones website with a header and two links sending you to two versions of Google, which only had ~25 million pages to search through. You also see that it’s something made by Stanford University. It did already have the google logo back then.
+                    In 2000 Google was out of beta and they had become an independent company. Their index consisted of over 1 billion web pages by now. You could also pick out of several different languages and they were accepting job applications. Later that year they also added filtering options for searching. They also added options for adding Google search to your site.
+                    In the second half of 2001 Google added image search and their index was up to 1,5 billion webpages.
+                    A year later they added a ‘news’ tab, which is pretty similar to Google’s current news tab.
+                    In 2004 they’ve added a couple of new services, one of which being “Froogle”, which was used for web-shopping.
+                    In 2006 Google bought Youtube.
+                    In 2007 Gmail and video search existed.
+                    In 2008 Google Maps was released.
+                    In 2010 the Google logo got an updated look and we also began to see the Google “Doodles”.
+                    In 2012 they introduced Google+. In 2015 they redesigned again to get to the Google we currently have. </li>
+            </ol>
+        </section>
+            
+        
+                
+        <figure><img src="https://lh6.googleusercontent.com/-Ueo24jfXbiU/AAAAAAAAAAI/AAAAAAAAABE/cUGwvDsVOn4/s0-c-k-no-ns/photo.jpg" alt="VU logo">
+        <figcaption>The VU logo</figcaption></figure>
+    </body>
+</html>

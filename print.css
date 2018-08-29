@@ -1,0 +1,76 @@
+html {background-color: #FFFFFF;
+    background-image: url(http://us.123rf.com/450wm/greissdesign/greissdesign1204/greissdesign120400015/13116412-wall--a-brown-breaks-wall--good-to-use-as-a-background.jpg);
+    background-repeat: repeat;}
+
+body.desaturate {
+	filter: grayscale(100%);
+}
+
+body {color: #000000;
+    font-size: small;
+    font-weight: 550;
+    font-style: normal;
+    font-variant: normal;
+    font-family: "Trebuchet MS", sans-serif;}
+
+h1 {font: bold small-caps 45px Palatino, serif;
+    margin-bottom: 0px;}
+h2 {font: 900  small-caps 30px Comic Sans MS, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    text-transform: capitalize}
+h3 {font: 700  small-caps 20px Comic Sans MS, sans-serif;
+    margin-top: 0px;
+    text-decoration: underline}
+
+section {margin-top: 15px}
+
+nav {margin-top: inherit;
+    border: white dotted 3pt;
+    background: #000000}
+
+a:link {color: black;}
+a:visited {color: black;}
+a:hover {color: black;}
+a:active {color: black;}
+a:focus {color: black;}
+
+.premade {caption-side: top;
+    border-color: black;
+    border-style: solid;
+    border-spacing: 5pt;
+    border-width: medium;
+    vertical-align: left;
+    text-align: center;}
+
+.table-input {background: #000000;
+    border: chartreuse dashed}
+
+caption {font: small-caps 900 italic 22px sans-serif;
+    text-decoration: underline 3pt}
+
+pre {font-weight: 600}
+code {font-weight: 600}
+img {float: right}
+
+ol li {text-indent: 5px;}
+
+ol {list-style: decimal-leading-zero outside;
+    margin: 0px 0px 5px 0px}
+
+ul li {orphans: 2;
+    widows: 8}
+
+ul {list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url(http://i.imgur.com/8ZWKn8S.png);}
+
+p {margin-bottom: 0px;
+   margin-left: inherit;
+   margin-right: auto;
+   margin-top: 0px;}
+
+.page-break {page-break-before: always;}
+.page-break-after {page-break-after: always;}
+
+.noPrint {display: none !important}

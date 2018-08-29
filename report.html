@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Synthesis &amp; Evaluation</title>
+        <link rel="stylesheet" type="text/css" href="screen.css" media="screen">
+    </head>
+    
+    <body>
+        <section class="date">
+            <h1>Synthesis &amp; Evaluation</h1>
+            <em>Giorgie Goiati &amp; Ted Asiamah --- CS 044</em>
+            <span>Wednsday 1 feb. 2017</span>
+        </section>
+        <section>
+            <h2>Introduction</h2>
+            <p>While we were creating our page we got constantly had to deal with making our page more accessible and usable. We our wanted our content to be available through multiple devices and different user groups. Our page features alts for images, different CSSs for different devices, a good text/background colour contrast, due to shadowed text and a good semantic structure. With use of sections, lists and headers. It also features a block of navigation links and easy to understand language (we avoided the use of difficult words).</p>
+            <p>Also, in terms of usability, our site has sortable tables and uses AJAX to get data, post data (from a database) and update the table with the data without having to refresh the page. It's easy to use, also for the developers, since we created a separate javascript file for the scripts we used for this. In this javascript file we also made use of JQuery, for its ease of use.</p>
+        </section>
+        <section>
+            <h2>Accessibility Highlights</h2>
+            <p>We found the most relevant guidelines to be:</p>
+            <dl>
+                <dt>1.4: "Make it easier for users to see and hear content including separating foreground from background."</dt>
+                <dd>We picked a more interesting background and to make it work, we had to carfully think about our use of colour and text style.</dd>
+                <dd>To make it work, we changed the background picture (of a brick wall) to be more "background friendly", by slightly dimming and blurring the picture in photoshop. As for the text, we went with a sans-serif font with a white colour. However this wasn't distinguishable enough, so we added an 1px black shadow to the text, making everything much more readable.</dd>
+                
+                <dt>2.4: "Provide ways to help users navigate, find content, and determine where they are."</dt>
+                <dd>Our webpage provides a navigation block, allowing for quick and easy navigation to anywhere on the page. Combined with sequential and logical headers and lables makes for a smooth browser experience.</dd>
+            </dl>
+        </section>
+        <section>
+            <h2>Improvement Plan</h2>
+            <p>Something that clashed with some of the WCAG was the sortable table. It's a javascript file from online that we implemented without changing. To improve it we'd have to make it so you can access it using the tab keys and that you can know beforehand that the table is sortable. We tried another table, but without success. But we did manage to fix the problem of knowing beforehand, by labeling the table.</p>
+            <p>A technical implementation detail was the form, not being in the table, which caused the form to be "out of shape". To fix this we created a new seperate row for the form, it actually was really simple to do.</p>
+            <p>The colour scheme remark was made before we made the improvements to the background and text style. The background is more "background friendly" and the text has a 1px black shadow. Also, all the links work now, they just didn't have anything to link to before.</p>
+            <p>The CSS file we used also wasn't made well, the page-breaks weren't implemented correctly. We fixed this by creating a specific class called "page-break" and applied it per object to page-break-after.</p>
+            <p>Also a technical problem was the part for handheld media redefining a lot of stuff that already had been said before. We cleaned up this part and images no longer go off screen.</p>
+            <p>It was not stated clearly before that AJAX was needed to perform a reset, we fixed this now however. The reset button now makes an AJAX GET request correctly.</p>
+            <p>We renamed the javascript file to table_scripts.js</p>
+        </section>
+        <section>
+            <h2>Appendix A</h2>
+            <table>
+                <tr class="table5">
+                    <th>Guideline</th>
+                    <th>Requirements met</th>
+                    <th>Explaination</th>
+                </tr>
+                <tr>
+                    <th>1.1.1</th>
+                    <td>Yes</td>
+                    <td>All our controls and inputs are correctly named and all other non-text content has text alternatives.</td>
+                </tr>
+                <tr>
+                    <th>1.3.1</th>
+                    <td>Yes</td>
+                    <td>We have made sure our website's structure has good semantic markup.</td>
+                </tr>
+                <tr>
+                    <th>1.3.2</th>
+                    <td>Yes</td>
+                    <td>Any sequence with words and paragraphs are presented in an order that does not change the meaning of the content.</td>
+                </tr>
+                <tr>
+                    <th>1.3.3</th>
+                    <td>No</td>
+                    <td>You don't know if the table is sortable until you try to sort it by clicking on the table headers.</td>
+                </tr>
+                <tr>
+                    <th>1.4.1</th>
+                    <td>Yes</td>
+                    <td>We haven't used any colour for anything outside of decoration purposes except for links (hovering, visited, etc.), which also provide information in other ways.</td>
+                </tr>
+                <tr>
+                    <th>2.1.1</th>
+                    <td>No</td>
+                    <td>The user can't sort the table without using a mouse.</td>
+                </tr>
+                <tr>
+                    <th>2.1.2</th>
+                    <td>Yes</td>
+                    <td>It is possible to move around the page with unmodified arrow or tab keys.</td>
+                </tr>
+                <tr>
+                    <th>2.4.1</th>
+                    <td>Yes</td>
+                    <td>We have a nav block, allowing to skip blocks of content.</td>
+                </tr>
+                <tr>
+                    <th>2.4.2</th>
+                    <td>Yes</td>
+                    <td>Our webpage has a relevant title.</td>
+                </tr>
+                <tr>
+                    <th>2.4.3</th>
+                    <td>Yes</td>
+                    <td>Our webpage has a logical and sequential ordering of content.</td>
+                </tr>
+                <tr>
+                    <th>2.4.4</th>
+                    <td>Yes</td>
+                    <td>The purpose of each link can be determined from the link text alone.</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Appendix B</h2>
+            <table>
+                <tr class="table5">
+                    <th>Rubric for</th>
+                    <th>Feedback</th>
+                    <th>Related to</th>
+                </tr>
+                <tr>
+                    <th>A1 HTML b)</th>
+                    <td>The assignment specifies to make the bottom row of the table into a form, not to create a form beneath the table.</td>
+                    <td>A technical implemtation detail that has no impact on the usability or accessibility of your page.</td>
+                </tr>
+                <tr>
+                    <th>A1 HTML d)</th>
+                    <td>You talk about good color schemes in the answers to the lab question, but the color scheme you use is very hard to read. The button 'Week 2' at the top of the page does not work.</td>
+                    <td>A potentially negative aspect of your submission that could be used to improve the usability or accessibility of your page.</td>
+                </tr>
+                <tr>
+                    <th>A1 CSS a)</th>
+                    <td>Page-break-before page-break-after orphans widows.</td>
+                    <td>A technical implemtation detail that has no impact on the usability or accessibility of your page</td>
+                </tr>
+                <tr>
+                    <th>A1 CSS b)</th>
+                    <td>Page breaks break up text. Forms or buttons should not appear on printed media.</td>
+                    <td>A potentially negative aspect of your submission that could be used to improve the usability or accessibility of your page.</td>
+                </tr>
+                <tr>
+                    <th>A1 CSS d)</th>
+                    <td>Horizontal scrolling due to the form. Images go (partially) off-screen on handheld devices.</td>
+                    <td>A potentially negative aspect of your submission that could be used to improve the usability or accessibility of your page.</td>
+                </tr>
+                <tr>
+                    <th>A1 CSS e)</th>
+                    <td>Browser compatibility report is missing.</td>
+                    <td>A technical implemtation detail that has no impact on the usability or accessibility of your page.</td>
+                </tr>
+                <tr>
+                    <th>A1 CSS f)</th>
+                    <td>The CSS part for handheld media redefines a lot of stuff that's already been defined without changing it. Try to be consistent with the CSS style.</td>
+                    <td>A technical implemtation detail that has no impact on the usability or accessibility of your page.</td>
+                </tr>
+                <tr>
+                    <th>A2 a)</th>
+                    <td>No static table. Input fields removed from dynamic table.</td>
+                    <td>A potentially negative aspect of your submission that could be used to improve the usability or accessibility of your page.</td>
+                </tr>
+                <tr>
+                    <th>A2 b)</th>
+                    <td>AJAX should be used to perform a reset.</td>
+                    <td>A potentially negative aspect of your submission that could be used to improve the usability or accessibility of your page.</td>
+                </tr>
+                <tr>
+                    <th>A2 d)</th>
+                    <td>Choose a different name for the JavaScript file.</td>
+                    <td>A technical implemtation detail that has no impact on the usability or accessibility of your page.</td>
+                </tr>
+                <tr>
+                    <th>A2 </th>
+                    <td>3 points bonus for using XMLHTTP. 2 points bonus for not using onclick.</td>
+                    <td>A positive aspect of your submission that improves usability or accessibility.</td>
+                </tr>
+            </table>
+        </section>
+    </body>
+</html>
